@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,400;1,500&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    transition: all .2s linear;
+}
+html{
+    font-size: 63%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;  
+    scroll-padding-top: 5rem
+    ;
+}
+section{
+    padding: 0.9rem 6rem;
+}
+.heading{
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.heading::before{
+    content: "";
+    position: absolute;
+    top: 50%;left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 0.1rem;
+    background: rgb(87, 82, 82);
+    z-index: -1;
+}
+.heading span{
+    font-size: 3rem;
+    color: black;
+    background: white;
+    padding: .5rem 2rem;
+
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background-color: green;
+    color: white;
+    
+    border-radius: 10px;
+    text-decoration: none;
+    
+}
+.btn:hover{
+    background-color: rgb(70, 67, 67);
+}
+/*header section 1*/
+.header .header-1{
+    background-color: #fff;
+    display: flex;
+    padding: 1.5rem 9%;
+    align-items: center;
+    justify-content: space-between; 
+}
+.header .header-1 .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: green;
+}
+.header .header-1 .search-form{
+    background-color: #fff;
+    width: 50rem;
+    height: 5rem;
+    border: 1px black;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    
+}
+.header .header-1 .search-form input{
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    height: 100%;
+    width: 100%;
+    text-transform: none;
+    color: black;
+}
+.header .header-1 .search-form label{
+    font-size: 2.6rem ;
+    padding-left: 1rem;
+    color: green;
+    cursor: pointer;
+}
+.header .header-1 .search-form label:hover{
+    color: black;
+}
+.header .header-1  div,
+.header .header-1  a{
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: green;
+    cursor: pointer;
+}
+.header .header-1  div:hover,
+.header .header-1  a:hover{
+    color: black;
+}
+#search-btn{
+    display: none;
+}
+/*header section 2*/
+.header .header-2{
+    background-color: green;
+    z-index: 10000;
+
+}
+.header .header-2 .navbar{
+    text-align: center;
+    
+}
+.header .header-2 .navbar a{
+    color: #fff;
+    font-size: 1.7rem;
+    padding: 1.7rem;
+    display: inline-block;
+}
+.header .header-2 .navbar a:hover{
+    background-color: rgb(58, 54, 54);
+}
+
+.header .header-2.active{
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    
+}
+.bottom-navbar{
+    background-color: green;
+    text-align: center;
+    position: fixed;
+    bottom: 0; right: 0; left: 0;
+    display: none;
+}
+.bottom-navbar a{
+    font-size: 2.5rem;
+    color: white;
+    padding: 2rem;
+    z-index: 1000;
+}
+.bottom-navbar a:hover{
+    background-color: rgb(58, 54, 54); 
+}
+
+
+
+/*login form*/
+.login-form-container{
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(228, 224, 224);
+    position: fixed;
+    top:0;right:-115%;
+    height: 100%;
+    width: 100%;
+}
+.login-form-container.active{
+    right: 0%;
+}
+.login-form-container form{
+    border: 1px solid black;
+    margin: 2rem;
+    padding: 2rem;
+    width: 40rem;
+    background-color: white;
+   
+}
+.login-form-container form h1{
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.login-form-container form  span{
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.login-form-container form  .box{
+    width: 100%;
+    padding: 0.5rem;
+    text-transform: none;
+}
+.login-form-container form .checkbox{
+    display: flex;
+    text-align: center;
+    padding: 1rem;
+    gap: 0.5rem
+    ;
+    margin-top: 0.5rem;
+}
+.login-form-container form .checkbox label{
+
+cursor: pointer;
+}
+
+.login-form-container form .btn{
+    width: 100%;
+    text-align: center;
+}
+.login-form-container form p{
+    font-size: 1.5rem;
+    color: black;
+    margin-top: 0.6rem;
+}
+.login-form-container form p a{
+    color: green;
+    text-decoration: underline;
+}
+.login-form-container form p a:hover{
+    color:rgb(32, 30, 30); 
+     }
+.login-form-container #close-login-btn{
+         position: absolute;
+         top: 1.5rem;right: 2.5rem;
+         font-size: 5rem;
+         cursor: pointer;
+     }
+
+/*home*/
+.home{
+    background: url(../image/banner-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+.home .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.home .row .content{
+    flex:1 1 42rem;
+}
+.home .row .book-slider{
+    flex:1 1 42rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.home .row .book-slider  a img{
+    height: 25rem;
+}
+.home .row .book-slider  a:hover img{
+    transform: scale(0.9);
+}
+.home .row .book-slider .stand{
+    margin-top: 2rem;
+    width: 100%;
+}
+.home .row .content h1{
+    font-size: 4.5rem;
+    color: black;
+}
+.home .row .content p{
+    font-size: 1.5rem;
+    color: rgb(75, 69, 69);
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+/*icons*/
+.icon-container{
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap: 1.5rem;
+}
+.icon-container .icons{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+.icon-container .icons i{
+    font-size: 3.5rem;
+    color: green;
+}
+.icon-container .icons h1{
+    font-size: 2.5rem;
+    color: black;
+    padding-bottom: 0.5rem;
+}
+.icon-container .icons p{
+    font-size: 1.5rem;
+    color: rgb(97, 91, 91);
+}
+
+
+/*featueed*/
+.feature .featured-slider .box{
+    width: 25rem;
+    position: relative;
+    margin: 2rem 0;
+    text-align: center;
+    overflow: hidden;
+   
+   
+}
+.feature .featured-slider .box .image{
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+.feature .featured-slider .box:hover .image{
+    transform: translateY(6rem)
+}
+.feature .featured-slider .box .image img{
+    height: 25rem;
+}
+.feature .featured-slider .box .icons{
+    position: absolute;
+    top: 0; left: 0;right: 0;
+    background: white;
+    z-index: 1;
+    border-bottom: 2px solid rgb(105, 99, 99);
+    transform: translateY(-100%);
+}
+.feature .featured-slider .box:hover .icons{
+    transform: translateY(0%); 
+}
+.feature .featured-slider .box .icons a{
+    font: 2.5rem;
+    color: black;
+   padding: 1.5rem;
+}
+.feature .featured-slider .box .icons a:hover{
+   color: white;
+   background-color: green;
+}
+.feature .featured-slider .box .content{
+    background: white;
+    padding: 1.5rem;
+}
+.feature .featured-slider .box .content h3{
+    font-size: 2rem;
+    color: black;
+}
+.feature .featured-slider .box .content div{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    color: black;
+}
+.feature .featured-slider .box .content span{
+    font-size: 1rem;
+    color: black;
+    text-decoration: line-through;
+}
+/*newsleeter*/
+.newsletter{
+    background:url(../image/letter-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.newsletter form{
+    width: 54rem;
+    margin-left: auto;
+    text-align: center;
+    padding: 4rem 0;
+}
+.newsletter form h3{
+    font-size: 2.2rem;
+    color: white;
+    font-weight: normal;
+    padding-bottom: 0.5rem;
+
+}
+.newsletter form .box{
+    width: 90%;
+    border-radius: 0.5rem;
+    color: black;
+    padding: 1rem 0.5rem;
+    text-transform: none;
+    font-size: 1.5rem;
+
+}
+
+/*------arrival*/
+.arrival .arrival-slider .box{
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    margin: 1rem ;
+}
+.arrival .arrival-slider .box:hover{
+    border: 2px solid rgb(66, 64, 64);
+    border-radius: 3px;
+}
+.arrival .arrival-slider .box .image img{
+    height: 15rem;
+}
+.arrival .arrival-slider .box .content h3{
+    font-size: 2.5rem;
+    color: black;
+}
+.arrival .arrival-slider .box .content .price{
+    font-size: 2rem;
+    color: black;
+   
+}
+.arrival .arrival-slider .box .content .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+
+}
+.arrival .arrival-slider .box .content .star i{
+    font-size: 1.5rem;
+    color: green;
+    
+}
+
+/*deal*/
+.deal{
+    background: #f3f3f3;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.deal .content{
+    flex: 1 1 42rem;
+}
+.deal .image{
+    flex: 1 1 42rem;
+}
+.deal .image img{
+    width: 100%;
+}
+.deal .content h3{
+   font-size: 2.5rem;
+   color: green;
+   padding-bottom: 0.5rem;
+}
+.deal .content h1{
+    font-size: 4rem;
+    padding-bottom: 0.5rem;
+  
+ }
+ .deal .content p{
+    font-size: 2.5rem;
+    color: rgb(90, 83, 83);
+  
+ }
+
+ /*review*/
+ .review .review-slider .box{
+     width: 25rem;
+     padding: 2rem;
+     border: 1px solid rgb(56, 56, 35);
+     margin: 2rem 1rem;
+     text-align: center;
+    cursor: pointer;
+ }
+ .review .review-slider .box:hover{
+    border: 2px solid rgb(56, 56, 35);
+ }
+ 
+ .review .review-slider .box .image img{
+     width: 7rem;
+     height: 7rem;
+     border-radius: 50%;
+ }
+ .review .review-slider .box h3{
+     font-size: 2.5rem;
+     color: black;
+ }
+ .review .review-slider .box p{
+    font-size: 1.5rem;
+    color: rgb(104, 99, 99);
+    line-height: 1.5;
+}
+.review .review-slider .box .star i{
+    font-size: 2rem;
+    color: green;
+    
+}
+
+/*blog*/
+.blog .blog-slider .box{
+    cursor: pointer;
+    width: 35rem;
+    margin: 2rem;
+   
+    text-align: center;
+    padding: 1.5rem;
+}
+.blog .blog-slider .box:hover{
+    border: 1px solid rgb(65, 61, 61);
+}
+.blog .blog-slider .box .image{
+    width: 100%;
+    height: 25rem;
+    overflow: hidden;
+}
+.blog .blog-slider .box .image img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+.blog .blog-slider .box:hover .image img{
+    transform: scale(1.1);
+}
+
+.blog .blog-slider .box  h3{
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.blog .blog-slider .box  p{
+    font-size: 1.5rem;
+    color: rgb(75, 69, 69);
+    line-height: 1.5;
+}
+
+/*footer*/
+.footer .div-container{
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap: 1.5rem;
+}
+.footer .div-container .box h3{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    color: black;
+}
+.footer .div-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    color: rgb(43, 38, 38);
+    padding: 1rem 0 ;
+}
+.footer .div-container .box a i{
+    font-size: 1.5rem;
+    color: green;
+    padding-right: 0.5rem;
+}
+.footer .div-container .box a:hover i{
+    padding-right: 1rem;
+}
+.footer .share{
+    text-align: center;
+    padding: 1rem 0;
+}
+.footer .share:hover{
+    padding-right: 0.5rem;
+}
+.footer .share a{
+    font-size: 3rem;
+    width: 5rem;
+    height: 5rem;
+    padding: 1rem;
+    line-height: 5rem;
+   color: white;
+    background-color: green;
+   border-radius: 40%;
+    margin:0 .3rem;
+}
+.footer .share a:hover{
+ color: black;
+}
+
+.footer .credit{
+    font-weight: bold;
+    color: black;
+    border-top: 1px solid rgb(58, 54, 54);
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 1.5rem;
+
+}
+.footer .credit span{
+    color: green;
+    padding: 1.5rem;
+}
+
+
+
+/*loder*/
+.loder-container {
+    background: white;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0; right:0;
+}
+.loder-container img{
+    height: 10rem;
+}
+.loder-container.active{
+    display: none;
+}
+
+
+@media (max-width:996px){
+    html{
+        font-size: 50%;  
+    } 
+}
+
+
+@media (max-width:775px){
+    .bottom-navbar{
+        z-index: 10000;
+        display: block;
+    }
+    .header .header-1{
+        box-shadow: aliceblue;
+        position: relative;
+    }
+    .header .header-1 .search-form{
+        position: absolute;
+        top: -110%; right: 5rem;
+        width: 90%;
+
+    }
+    #search-btn{
+        display:inline-block;
+    }
+  .header .header-2{
+      display: none;
+  }
+  .header .header-1 .search-form.active{
+      top: 110%;
+  }
+  section{
+    padding: 3rem 2rem;
+}
+.home .row .content{
+    text-align: center;
+}
+.home .row .content h1{
+    font-size: 3.5rem;
+    color: black;
+}
+.newsletter{
+    background-position: right;
+}
+.newsletter form{
+    margin-left: 0%;
+    max-width: 100%;
+}
+}
